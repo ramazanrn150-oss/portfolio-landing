@@ -1,146 +1,462 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>کوروش نیک‌نژادی | طراحی سایت تبدیل‌محور</title>
-<meta name="description" content="نمونه‌کار لندینگ تیره با انیمیشن نرم، کارت‌های شیشه‌ای، CTA قوی و ریسپانسیو. طراحی سایت تبدیل‌محور، A/B تست، Google Ads، GA4.">
-<style>
-  /* ========= Design System ========= */
-  :root{
-    --bg:#0B0D0F; --fg:#E6EAF2; --muted:#A8B0BF;
-    --accent:#22D3EE; --cta:#FF4D67; --card:#121621; --border:#232a37;
-    --wrap:1100px;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name] — Landing Resume | Convert Views to Calls</title>
+  <meta name="description" content="من [Your Name] هستم؛ با تیتر و پیام واضح، بازدید را به تماس و مشتری تبدیل می‌کنم. این رزومه لندینگ تیره و مدرن، خدمات، نمونه‌کار و نتایج را شفاف نشان می‌دهد." />
+  <link rel="canonical" href="https://your-github-username.github.io/" />
+  <meta name="theme-color" content="#0b0f17" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="[Your Name] — Landing Resume" />
+  <meta property="og:description" content="تیترهای واضح. لیدهای بیشتر. لندینگ رزومه مدرن و تیره." />
+  <meta property="og:image" content="https://your-domain/og-image.png" />
+  <meta property="og:locale" content="fa_IR" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="[Your Name] — Landing Resume" />
+  <meta name="twitter:description" content="تیترهای واضح. لیدهای بیشتر. لندینگ رزومه مدرن و تیره." />
+  <meta name="twitter:image" content="https://your-domain/og-image.png" />
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"[Your Name]",
+    "jobTitle":"Headline & Landing Specialist",
+    "url":"https://your-github-username.github.io/",
+    "email":"mailto:[your@email]",
+    "sameAs":["[linkedin-url]","[github-url]","[x-url]"]
   }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{text-decoration:underline}
-  img{max-width:100%;display:block}
-
-  .wrap{max-width:var(--wrap);margin:auto;padding:24px}
-  .nav{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:#0b0d0fCC;border-bottom:1px solid #ffffff14;z-index:50}
-  .nav .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
-  .logo{font-weight:800;letter-spacing:.5px}
-  .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid #ffffff22;background:#ffffff0f;color:#dfe5f2;border-radius:999px;padding:6px 10px;font-size:12px}
-
-  .hero{display:grid;gap:28px;grid-template-columns:1.2fr .8fr;align-items:center;padding:40px 0}
-  .badge{display:inline-block;border:1px solid #ffffff22;background:#ffffff12;padding:6px 10px;border-radius:999px;font-size:12px}
-  h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:14px 0 6px;font-weight:900}
-  .sub{color:var(--muted);max-width:60ch}
-  .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-  .btn{position:relative;isolation:isolate;border-radius:14px;font-weight:700;padding:12px 18px;border:1px solid #ffffff22;background:#ffffff10;color:var(--fg)}
-  .btn:hover{background:#ffffff14}
-  .btn.primary{border:0;color:#0B0D0F;background:var(--cta)}
-  .btn.primary::before{ /* neon border animation */
-    content:"";position:absolute;inset:-2px;border-radius:16px;
-    background:conic-gradient(from 180deg,#22D3EE,#FF4D67,#22D3EE);
-    filter:blur(8px);opacity:.45;z-index:-1;animation:spin 6s linear infinite;
-  }
-
-  .media{place-self:center;justify-self:center}
-  .avatar{width:min(260px,70vw);aspect-ratio:1/1;border-radius:24px;object-fit:cover;
-    border:1px solid #ffffff22;box-shadow:0 10px 40px #0008}
-
-  .grid{display:grid;gap:16px}
-  .grid3{grid-template-columns:repeat(3,1fr)}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
-  .card h3{margin:0 0 8px 0}
-
-  .split{display:grid;gap:16px;grid-template-columns:1fr 1fr}
-
-  .divider{height:1px;background:linear-gradient(90deg,transparent,#ffffff18,transparent);margin:28px 0}
-
-  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.show{opacity:1;transform:none}
-
-  .sticky-cta{position:fixed;inset-inline:0;bottom:14px;display:none;justify-content:center;z-index:60}
-  .sticky-cta a{background:var(--cta);color:#0B0D0F;border-radius:999px;padding:12px 18px;font-weight:800;border:0}
-  @media (max-width:900px){
-    .hero{grid-template-columns:1fr}
-    .grid3{grid-template-columns:1fr}
-    .split{grid-template-columns:1fr}
-    .sticky-cta{display:flex}
-  }
-  @keyframes spin{to{transform:rotate(1turn)}}
-  @media (prefers-reduced-motion:reduce){.reveal{transition:none}.btn.primary::before{animation:none}}
-</style>
+  </script>
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --bg2:#0f1624;
+      --card:#111828cc;
+      --muted:#94a3b8;
+      --text:#e5e7eb;
+      --brand:#60a5fa;
+      --brand-2:#22d3ee;
+      --accent:#a78bfa;
+      --success:#34d399;
+      --danger:#f87171;
+      --ring: 0 0 0 4px #60a5fa22;
+      --radius:18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "IRANSans", "Vazirmatn", Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #1b2a4a66, transparent 60%),
+        radial-gradient(900px 600px at 100% 0%, #0a3d6266, transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      background-attachment: fixed;
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+    a{color:var(--brand);text-decoration:none}
+    a:hover{opacity:.9}
+    .container{width:min(1120px, 92%);margin-inline:auto}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      background:linear-gradient(180deg,#0b0f17ee,#0b0f1700);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid #ffffff12;
+    }
+    .nav .inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .logo-badge{
+      width:38px;height:38px;border-radius:10px;
+      background: conic-gradient(from 90deg,var(--brand),var(--brand-2),var(--accent));
+      box-shadow:0 0 40px #60a5fa44 inset, 0 10px 20px #00000066;
+    }
+    .nav a.btn{padding:10px 16px;border-radius:12px;border:1px solid #ffffff1a}
+    .btn-primary{
+      background: linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#041018; font-weight:700; border:none;
+      box-shadow:0 10px 30px #22d3ee2a;
+    }
+    .btn-ghost{color:var(--text);background:#ffffff08}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn,button{cursor:pointer;transition:.2s ease}
+    /* HERO */
+    .hero{padding:96px 0 48px; text-align:center}
+    .eyebrow{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:6px 10px;border-radius:999px;border:1px solid #ffffff1a;
+      color:var(--muted); font-size:13px; background:#ffffff08
+    }
+    .hero h1{
+      font-size: clamp(28px, 5vw, 48px);
+      line-height:1.2;margin:18px auto 12px;
+      max-width:20ch; font-weight:900;
+      letter-spacing:.2px;
+    }
+    .hero p{
+      color:var(--muted);max-width:60ch;margin:0 auto 22px;font-size:1.05rem
+    }
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+    .metrics{
+      margin-top:28px; display:flex;flex-wrap:wrap;gap:14px;justify-content:center
+    }
+    .metric{
+      background:#ffffff08;border:1px solid #ffffff14;border-radius:14px;
+      padding:10px 14px; font-weight:700; color:#d1d5db
+    }
+    /* SECTIONS */
+    section{padding:54px 0}
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .card{
+      background:linear-gradient(180deg,#0e1421e6,#0b0f17d8);
+      border:1px solid #ffffff12; border-radius:var(--radius); box-shadow:var(--shadow);
+    }
+    .card .body{padding:22px}
+    .sec-title{
+      display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px
+    }
+    .sec-title h2{margin:0;font-size: clamp(22px, 3.2vw, 32px)}
+    .muted{color:var(--muted)}
+    /* VALUE / BENEFITS */
+    .benefit{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:14px;border:1px dashed #ffffff22}
+    .benefit .icon{min-width:34px;height:34px;border-radius:10px;background:#ffffff0e;display:grid;place-items:center}
+    /* SERVICES */
+    .service{padding:20px;border:1px solid #ffffff12;border-radius:14px;background:#ffffff05}
+    .service h3{margin:0 0 8px}
+    .service ul{margin:0;padding:0 0 0 18px}
+    /* WORK */
+    .work-card{overflow:hidden}
+    .work-thumb{
+      aspect-ratio: 16/9; background: linear-gradient(45deg,#1b2a4a,#0a3d62);
+      border-bottom:1px solid #ffffff12;
+    }
+    .work-card .body p{margin:6px 0 10px}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;
+      background:#ffffff0f;border:1px solid #ffffff18;color:#cbd5e1;font-size:12px
+    }
+    /* TESTIMONIALS */
+    .quote{font-size:1.02rem}
+    .who{display:flex;align-items:center;gap:10px;margin-top:12px}
+    .avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(45deg,#22d3ee,#a78bfa)}
+    /* PROCESS */
+    .step{display:flex;gap:12px;align-items:flex-start}
+    .step .num{min-width:34px;height:34px;border-radius:12px;background:#22d3ee22;display:grid;place-items:center;font-weight:800}
+    /* CONTACT */
+    form{
+      display:grid;gap:12px; grid-template-columns:1fr; max-width:680px;margin:auto
+    }
+    input,textarea{
+      background:#0b0f17; border:1px solid #ffffff1a; color:var(--text);
+      border-radius:12px; padding:12px 14px; outline:none
+    }
+    input:focus,textarea:focus{box-shadow:var(--ring);border-color:#60a5fa66}
+    textarea{min-height:130px;resize:vertical}
+    /* FOOTER */
+    footer{padding:40px 0;color:#9aa4b2;border-top:1px solid #ffffff12}
+    .social{display:flex;gap:10px;flex-wrap:wrap}
+    .social a{padding:8px 12px;border:1px solid #ffffff14;border-radius:12px;background:#ffffff08}
+    /* UTIL */
+    .col-4{grid-column: span 4}
+    .col-6{grid-column: span 6}
+    .col-8{grid-column: span 8}
+    .col-12{grid-column: span 12}
+    @media (max-width:900px){
+      .col-4,.col-6,.col-8{grid-column: span 12}
+    }
+    /* Reveal Animations (respect motion) */
+    .reveal{opacity:0; transform: translateY(14px); transition:.6s ease}
+    .reveal.on{opacity:1; transform:none}
+    @media (prefers-reduced-motion: reduce){
+      .reveal{opacity:1; transform:none}
+    }
+    /* Back to top */
+    .to-top{
+      position:fixed; bottom:18px; left:18px; z-index:40;
+      width:44px;height:44px;border-radius:12px;border:1px solid #ffffff1a;background:#111827cc;
+      display:grid;place-items:center; box-shadow:var(--shadow); opacity:0; transform:translateY(20px); transition:.3s ease
+    }
+    .to-top.show{opacity:1; transform:none}
+  </style>
 </head>
 <body>
-  <!-- Nav -->
-  <div class="nav">
-    <div class="wrap in">
-      <div class="logo">Kourosh<span style="color:var(--accent)">.dev</span></div>
-      <a class="pill" href="mailto:idealzendegy@gmail.com" aria-label="شروع پروژه">شروع پروژه ↗</a>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container inner">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <span>[Your Name]</span>
+      </div>
+      <div class="cta">
+        <a href="#contact" class="btn btn-ghost">درخواست مشاوره</a>
+        <a href="resume.pdf" class="btn btn-primary" download>دانلود رزومه</a>
+      </div>
     </div>
-  </div>
+  </nav>
 
-  <main class="wrap">
-    <!-- Hero -->
-    <section class="hero">
-      <div>
-        <span class="badge">رزومه × پرتفولیو</span>
-        <h1>سایتی می‌سازم که <span style="color:var(--accent)">تبدیل</span> می‌گیرد؛ کمپین‌هایی که <span style="color:var(--cta)">می‌فروشند</span>.</h1>
-        <p class="sub">طراح وب و دیجیتال‌مارکتر با ۱۲+ سال تجربه — از لندینگ و کپی‌نویسی تا ردیابی GA4 و A/B تست، هدف من رشد واقعی کسب‌وکار است.</p>
-        <div class="cta">
-          <a class="btn primary" href="mailto:idealzendegy@gmail.com">رزرو مشاوره رایگان</a>
-          <a class="btn" href="#work">نمونه‌کارها</a>
-          <a class="btn" href="resume.pdf">دانلود PDF</a>
+  <!-- HERO -->
+  <header class="hero container">
+    <span class="eyebrow">تیترهای واضح • پیام شفاف • تبدیل بالاتر</span>
+    <h1>من <span style="background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;">[Your Name]</span> هستم؛
+      کمک می‌کنم بازدیدهای لینکدین و وب‌سایت شما به <u>تماس</u> و <u>مشتری</u> تبدیل شوند.</h1>
+    <p>
+      تخصص من: بهینه‌سازی هدلاین (LinkedIn & Homepage) و ساخت لندینگ‌های مینیمالِ پرفورمنس.
+      <br/>در ۷ روز نسخه‌ی قابل‌تست می‌سازیم، با داده بهینه می‌کنیم، و نرخ رزرو تماس را بالا می‌بریم.
+    </p>
+    <div class="cta-group">
+      <a class="btn btn-primary" href="#contact">شروع همکاری (رایگان)</a>
+      <a class="btn btn-ghost" href="#work">مشاهده نتایج و نمونه‌کار</a>
+    </div>
+    <div class="metrics">
+      <div class="metric">+120% رشد CTR هدلاین</div>
+      <div class="metric">+2.4× افزایش رزرو تماس</div>
+      <div class="metric">+38 پروژه موفق</div>
+    </div>
+  </header>
+
+  <!-- VALUE / BENEFITS -->
+  <section id="value" class="container">
+    <div class="sec-title">
+      <h2>چرا همکاری با من نتیجه می‌دهد؟</h2>
+      <span class="muted">مزایا، نه صرفاً ویژگی‌ها</span>
+    </div>
+    <div class="grid">
+      <div class="col-6 card reveal">
+        <div class="body benefit">
+          <div class="icon">🎯</div>
+          <div>
+            <h3>پیام ۵ ثانیه‌ای</h3>
+            <p class="muted">مشتری در ۵ ثانیه بفهمد «چه چیزی، برای چه کسی، با چه نتیجه‌ای»—سردرگمی صفر، کلیک بیشتر.</p>
+          </div>
         </div>
       </div>
-      <div class="media">
-        <img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=800" alt="کوروش نیک‌نژادی">
+      <div class="col-6 card reveal">
+        <div class="body benefit">
+          <div class="icon">⚡</div>
+          <div>
+            <h3>اجرا در ۷ روز</h3>
+            <p class="muted">نسخه‌ی اول سریع لانچ می‌شود؛ سپس با A/B تست و داده، نسخه‌های پیروزش را نگه می‌داریم.</p>
+          </div>
+        </div>
       </div>
-    </section>
+      <div class="col-6 card reveal">
+        <div class="body benefit">
+          <div class="icon">📈</div>
+          <div>
+            <h3>تمرکز بر تبدیل</h3>
+            <p class="muted">هر تیتر/سکشن با هدف یک اقدام ساخته می‌شود: کلیک، اسکرول، فرم—بدون حواس‌پرتی.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 card reveal">
+        <div class="body benefit">
+          <div class="icon">🔎</div>
+          <div>
+            <h3>کپی مبتنی بر تحقیق</h3>
+            <p class="muted">صدای مشتری، ترس‌ها و خواسته‌ها را ترجمه می‌کنیم به مزیت‌های ملموس و قابل وعده.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="divider"></div>
+  <!-- SERVICES -->
+  <section id="services" class="container">
+    <div class="sec-title">
+      <h2>خدمات من</h2>
+      <span class="muted">سریع، شفاف، نتیجه‌گرا</span>
+    </div>
+    <div class="grid">
+      <div class="col-4 card reveal">
+        <div class="body service">
+          <h3>Headline Sprint</h3>
+          <p class="muted">بازنویسی هدلاین لینکدین/هوم‌پیج + ساب‌هد + CTAهای تست‌شده.</p>
+          <ul>
+            <li>۳ نسخه آماده A/B</li>
+            <li>چک‌لیست ۵ ثانیه‌ای</li>
+            <li>تحویل ۴۸–۷۲ ساعته</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4 card reveal">
+        <div class="body service">
+          <h3>Landing Revamp</h3>
+          <p class="muted">بازطراحی لندینگ‌های کلیدی با تمرکز بر تبدیل.</p>
+          <ul>
+            <li>ساختار CTA محور</li>
+            <li>مایکروکپی اعتمادساز</li>
+            <li>بهینه‌سازی سرعت</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4 card reveal">
+        <div class="body service">
+          <h3>Audit & Coaching</h3>
+          <p class="muted">آنالیز کامل + جلسه کوچینگ اجرا برای تیم‌های کوچک.</p>
+          <ul>
+            <li>فهرست اولویت‌ها</li>
+            <li>نقشه راه ۳۰ روزه</li>
+            <li>پشتیبانی ایمیلی</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Value props -->
-    <section class="grid grid3 reveal" aria-label="ارزش‌های پیشنهادی">
-      <article class="card"><h3>لندینگ تبدیل‌محور</h3><p>ساختار تست‌شده، شواهد اعتماد، و CTA واضح → افزایش نرخ تبدیل.</p></article>
-      <article class="card"><h3>تبلیغات سودده</h3><p>Google/Meta با ردیابی تمیز (GA4/GTM) → کاهش CPL و رشد ROI.</p></article>
-      <article class="card"><h3>دیتا و A/B تست</h3><p>داشبورد تصمیم‌ساز + آزمایش‌ها → بهینه‌سازی مستمر به‌جای حدس.</p></article>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Mini cases -->
-    <section id="work" class="split reveal" aria-label="نمونه‌کارها">
-      <article class="card">
-        <h3>فروشگاه A — ری‌دیزاین لندینگ</h3>
-        <p><b>نتیجه:</b> CVR از ۱٫۶٪ → ۳٫۴٪. فرم از ۸ به ۳ فیلد، کپی ارزش‌محور، اثبات اجتماعی.</p>
+  <!-- WORK / CASE STUDIES -->
+  <section id="work" class="container">
+    <div class="sec-title">
+      <h2>نتایج و نمونه‌کار</h2>
+      <span class="muted">قبل/بعد و اعداد مهم</span>
+    </div>
+    <div class="grid">
+      <article class="col-6 card work-card reveal">
+        <div class="work-thumb" role="img" aria-label="پروژه A - افزایش رزرو تماس"></div>
+        <div class="body">
+          <div class="badge">+92% CTR Headline</div>
+          <h3>پروژه A — کوچ بیزنس</h3>
+          <p class="muted">تعویض هدلاین + ساب‌هد مشتری‌محور → 2.1× افزایش رزرو تماس در 21 روز.</p>
+          <a href="#" class="btn btn-ghost">مطالعه موردی</a>
+        </div>
       </article>
-      <article class="card">
-        <h3>استارتاپ B — بهینه‌سازی کمپین</h3>
-        <p><b>نتیجه:</b> CPL از ۱۶۰k → ۹۹k. سگمنتیشن، پاک‌سازی رویدادها در GA4، خلاقه‌های مشخص.</p>
+      <article class="col-6 card work-card reveal">
+        <div class="work-thumb" role="img" aria-label="پروژه B - رشد لید"></div>
+        <div class="body">
+          <div class="badge">+140% Leads</div>
+          <h3>پروژه B — سولوپرنور حوزه سلامت</h3>
+          <p class="muted">لندینگ مینیمال + ۲ CTA واضح → لیدهای واجد شرایط 1.4×.</p>
+          <a href="#" class="btn btn-ghost">مشاهده وایرفریم</a>
+        </div>
       </article>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider"></div>
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="container">
+    <div class="sec-title">
+      <h2>آنچه مشتریان می‌گویند</h2>
+      <span class="muted">اثبات اجتماعی واقعی</span>
+    </div>
+    <div class="grid">
+      <div class="col-6 card reveal">
+        <div class="body">
+          <p class="quote">«فقط با تغییر هدلاین لینکدین، DMهای همکاری ۲ برابر شد. شفاف و سریع.»</p>
+          <div class="who">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <strong>[نام مشتری]</strong><br><span class="muted">کوچ کسب‌وکار</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 card reveal">
+        <div class="body">
+          <p class="quote">«لندینگ جدیدمان بدون شلوغی اضافی، نرخ رزرو را در ماه اول 2.4× کرد.»</p>
+          <div class="who">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <strong>[نام مشتری]</strong><br><span class="muted">سولوپرنور سلامت</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA -->
-    <section class="card reveal" aria-label="دعوت به اقدام">
-      <h3>آماده‌ای سریع‌تر مشتری بگیری؟</h3>
-      <p class="sub">۳۰ دقیقه مشاوره رایگان؛ ببینیم کجا می‌تونیم سریع‌ترین برد رو بسازیم.</p>
-      <p>
-        <a class="btn primary" href="mailto:idealzendegy@gmail.com">شروع پروژه</a>
-        <a class="btn" href="https://pixotestudio.ir" target="_blank" rel="noopener">وب‌سایت من</a>
-      </p>
-    </section>
-  </main>
+  <!-- PROCESS -->
+  <section id="process" class="container">
+    <div class="sec-title">
+      <h2>فرایند همکاری شفاف</h2>
+      <span class="muted">خلق → ترافیک → تبدیل → نگهداری</span>
+    </div>
+    <div class="grid">
+      <div class="col-6 card reveal"><div class="body step"><div class="num">۱</div><div><strong>کال تشخیص (رایگان)</strong><br><span class="muted">شناخت مخاطب، ارزش پیشنهادی و موانع تبدیل.</span></div></div></div>
+      <div class="col-6 card reveal"><div class="body step"><div class="num">۲</div><div><strong>هدلاین‌ها و وایرفریم</strong><br><span class="muted">۳ نسخه هدلاین + لایه‌بندی CTAمحور.</span></div></div></div>
+      <div class="col-6 card reveal"><div class="body step"><div class="num">۳</div><div><strong>لانچ سریع</strong><br><span class="muted">استقرار نسخه v1 در ۷ روز.</span></div></div></div>
+      <div class="col-6 card reveal"><div class="body step"><div class="num">۴</div><div><strong>اندازه‌گیری و A/B تست</strong><br><span class="muted">CTA، تیتر و ساب‌هد تا رسیدن به برنده.</span></div></div></div>
+    </div>
+  </section>
 
-  <!-- Sticky CTA on mobile -->
-  <div class="sticky-cta" aria-hidden="true">
-    <a href="mailto:idealzendegy@gmail.com">رزرو مشاوره رایگان</a>
-  </div>
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <div class="sec-title">
+      <h2>شروع کنیم؟</h2>
+      <span class="muted">فرم را پر کن؛ ۲۴ ساعته پاسخ می‌دهم.</span>
+    </div>
+    <form class="card body reveal" onsubmit="event.preventDefault(); alert('ممنون! پیام شما ارسال شد (نمونه). فرم را به یک سرویس ایمیل/فرم واقعی متصل کنید.');">
+      <input type="text" name="name" placeholder="نام شما" required />
+      <input type="email" name="email" placeholder="ایمیل" required />
+      <textarea name="message" placeholder="چطور می‌تونم کمک کنم؟" required></textarea>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <button class="btn btn-primary" type="submit">درخواست مشاوره</button>
+        <a class="btn btn-ghost" href="mailto:[your@email]">ایمیل مستقیم</a>
+        <span class="muted">یا در لینکدین: <a href="[linkedin-url]">[linkedin-url]</a></span>
+      </div>
+    </form>
+  </section>
 
-<script>
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} })
-  }, {threshold:.15});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+      <small>© <span id="y"></span> [Your Name]. همه حقوق محفوظ است.</small>
+      <div class="social">
+        <a href="[github-url]" aria-label="GitHub">GitHub</a>
+        <a href="[linkedin-url]" aria-label="LinkedIn">LinkedIn</a>
+        <a href="[x-url]" aria-label="X">X</a>
+        <a href="resume.pdf" download>رزومه (PDF)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" aria-label="بازگشت به بالا" title="بالا">
+    ↑
+  </button>
+
+  <script>
+    // سال در فوتر
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // اسکرول نرم
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+
+    // Reveal on scroll (با احترام به reduce motion)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!prefersReduced){
+      const els=[...document.querySelectorAll('.reveal')];
+      const io=new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+        })
+      },{rootMargin:'-10% 0px -10% 0px', threshold:0.1});
+      els.forEach(el=>io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el=>el.classList.add('on'));
+    }
+
+    // Back to top
+    const toTop=document.querySelector('.to-top');
+    const toggleTop=()=> {
+      if(window.scrollY>600){ toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
+    };
+    window.addEventListener('scroll', toggleTop);
+    toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+  </script>
 </body>
 </html>
