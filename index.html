@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>کوروش نیک‌نژادی | طراحی سایت تبدیل‌محور</title>
+<meta name="description" content="نمونه‌کار لندینگ تیره با انیمیشن نرم، کارت‌های شیشه‌ای، CTA قوی و ریسپانسیو. طراحی سایت تبدیل‌محور، A/B تست، Google Ads، GA4.">
+<style>
+  /* ========= Design System ========= */
+  :root{
+    --bg:#0B0D0F; --fg:#E6EAF2; --muted:#A8B0BF;
+    --accent:#22D3EE; --cta:#FF4D67; --card:#121621; --border:#232a37;
+    --wrap:1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:var(--wrap);margin:auto;padding:24px}
+  .nav{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:#0b0d0fCC;border-bottom:1px solid #ffffff14;z-index:50}
+  .nav .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+  .logo{font-weight:800;letter-spacing:.5px}
+  .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid #ffffff22;background:#ffffff0f;color:#dfe5f2;border-radius:999px;padding:6px 10px;font-size:12px}
+
+  .hero{display:grid;gap:28px;grid-template-columns:1.2fr .8fr;align-items:center;padding:40px 0}
+  .badge{display:inline-block;border:1px solid #ffffff22;background:#ffffff12;padding:6px 10px;border-radius:999px;font-size:12px}
+  h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:14px 0 6px;font-weight:900}
+  .sub{color:var(--muted);max-width:60ch}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .btn{position:relative;isolation:isolate;border-radius:14px;font-weight:700;padding:12px 18px;border:1px solid #ffffff22;background:#ffffff10;color:var(--fg)}
+  .btn:hover{background:#ffffff14}
+  .btn.primary{border:0;color:#0B0D0F;background:var(--cta)}
+  .btn.primary::before{ /* neon border animation */
+    content:"";position:absolute;inset:-2px;border-radius:16px;
+    background:conic-gradient(from 180deg,#22D3EE,#FF4D67,#22D3EE);
+    filter:blur(8px);opacity:.45;z-index:-1;animation:spin 6s linear infinite;
+  }
+
+  .media{place-self:center;justify-self:center}
+  .avatar{width:min(260px,70vw);aspect-ratio:1/1;border-radius:24px;object-fit:cover;
+    border:1px solid #ffffff22;box-shadow:0 10px 40px #0008}
+
+  .grid{display:grid;gap:16px}
+  .grid3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+  .card h3{margin:0 0 8px 0}
+
+  .split{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#ffffff18,transparent);margin:28px 0}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.show{opacity:1;transform:none}
+
+  .sticky-cta{position:fixed;inset-inline:0;bottom:14px;display:none;justify-content:center;z-index:60}
+  .sticky-cta a{background:var(--cta);color:#0B0D0F;border-radius:999px;padding:12px 18px;font-weight:800;border:0}
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .grid3{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr}
+    .sticky-cta{display:flex}
+  }
+  @keyframes spin{to{transform:rotate(1turn)}}
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none}.btn.primary::before{animation:none}}
+</style>
+</head>
+<body>
+  <!-- Nav -->
+  <div class="nav">
+    <div class="wrap in">
+      <div class="logo">Kourosh<span style="color:var(--accent)">.dev</span></div>
+      <a class="pill" href="mailto:idealzendegy@gmail.com" aria-label="شروع پروژه">شروع پروژه ↗</a>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <span class="badge">رزومه × پرتفولیو</span>
+        <h1>سایتی می‌سازم که <span style="color:var(--accent)">تبدیل</span> می‌گیرد؛ کمپین‌هایی که <span style="color:var(--cta)">می‌فروشند</span>.</h1>
+        <p class="sub">طراح وب و دیجیتال‌مارکتر با ۱۲+ سال تجربه — از لندینگ و کپی‌نویسی تا ردیابی GA4 و A/B تست، هدف من رشد واقعی کسب‌وکار است.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:idealzendegy@gmail.com">رزرو مشاوره رایگان</a>
+          <a class="btn" href="#work">نمونه‌کارها</a>
+          <a class="btn" href="resume.pdf">دانلود PDF</a>
+        </div>
+      </div>
+      <div class="media">
+        <img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=800" alt="کوروش نیک‌نژادی">
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Value props -->
+    <section class="grid grid3 reveal" aria-label="ارزش‌های پیشنهادی">
+      <article class="card"><h3>لندینگ تبدیل‌محور</h3><p>ساختار تست‌شده، شواهد اعتماد، و CTA واضح → افزایش نرخ تبدیل.</p></article>
+      <article class="card"><h3>تبلیغات سودده</h3><p>Google/Meta با ردیابی تمیز (GA4/GTM) → کاهش CPL و رشد ROI.</p></article>
+      <article class="card"><h3>دیتا و A/B تست</h3><p>داشبورد تصمیم‌ساز + آزمایش‌ها → بهینه‌سازی مستمر به‌جای حدس.</p></article>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Mini cases -->
+    <section id="work" class="split reveal" aria-label="نمونه‌کارها">
+      <article class="card">
+        <h3>فروشگاه A — ری‌دیزاین لندینگ</h3>
+        <p><b>نتیجه:</b> CVR از ۱٫۶٪ → ۳٫۴٪. فرم از ۸ به ۳ فیلد، کپی ارزش‌محور، اثبات اجتماعی.</p>
+      </article>
+      <article class="card">
+        <h3>استارتاپ B — بهینه‌سازی کمپین</h3>
+        <p><b>نتیجه:</b> CPL از ۱۶۰k → ۹۹k. سگمنتیشن، پاک‌سازی رویدادها در GA4، خلاقه‌های مشخص.</p>
+      </article>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CTA -->
+    <section class="card reveal" aria-label="دعوت به اقدام">
+      <h3>آماده‌ای سریع‌تر مشتری بگیری؟</h3>
+      <p class="sub">۳۰ دقیقه مشاوره رایگان؛ ببینیم کجا می‌تونیم سریع‌ترین برد رو بسازیم.</p>
+      <p>
+        <a class="btn primary" href="mailto:idealzendegy@gmail.com">شروع پروژه</a>
+        <a class="btn" href="https://pixotestudio.ir" target="_blank" rel="noopener">وب‌سایت من</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Sticky CTA on mobile -->
+  <div class="sticky-cta" aria-hidden="true">
+    <a href="mailto:idealzendegy@gmail.com">رزرو مشاوره رایگان</a>
+  </div>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} })
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
